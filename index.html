@@ -1,0 +1,193 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>申论规范词 · 高频表达</title>
+<style>
+:root{--bg:#f5f5f7;--card:#fff;--text:#1d1d1f;--sub:#86868b;--accent:#5865f2;--accent2:#8b5cf6;--border:rgba(0,0,0,.06)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;line-height:1.5}
+.nav{position:sticky;top:0;z-index:100;background:rgba(245,245,247,.8);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 24px}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:52px}
+.nav-badge{font-size:.68em;padding:5px 12px;border-radius:20px;background:#fff;border:1px solid var(--border);color:var(--sub)}
+.main{max-width:1100px;margin:0 auto;padding:28px 24px 40px}
+.search-box{width:100%;padding:14px 20px;border:2px solid var(--border);border-radius:14px;font-size:.9em;outline:none;background:var(--card);margin-bottom:20px;transition:.2s}
+.search-box:focus{border-color:var(--accent)}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px}
+.tab{padding:7px 16px;border-radius:16px;font-size:.74em;font-weight:600;cursor:pointer;border:1px solid var(--border);background:#fff;color:var(--sub);transition:.2s}
+.tab:hover{border-color:var(--accent);color:var(--text)}
+.tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.word-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+@media(max-width:768px){.word-grid{grid-template-columns:1fr}}
+.word-card{background:var(--card);border-radius:14px;padding:16px 18px;border:1px solid var(--border);transition:.2s;cursor:default}
+.word-card:hover{border-color:rgba(88,101,242,.2);box-shadow:0 4px 12px rgba(0,0,0,.04)}
+.word-card .formal{font-size:.88em;font-weight:700;color:var(--accent);margin-bottom:4px}
+.word-card .casual{font-size:.72em;color:var(--sub);line-height:1.5}
+.word-card .casual::before{content:'← '}
+.count-bar{text-align:center;font-size:.72em;color:var(--sub);margin-bottom:16px}
+.footer{text-align:center;padding:30px;color:#b0b0b8;font-size:.65em;border-top:1px solid var(--border)}
+</style></head><body>
+
+<nav class="nav"><div class="nav-inner"><div style="font-size:.9em;font-weight:700">📝 申论规范词 · 高频表达</div><div class="nav-badge">提分利器</div></div></nav>
+
+<div class="main">
+<input class="search-box" id="searchInput" placeholder="搜索规范词或口语表达..." oninput="renderWords()">
+<div class="tabs" id="tabs"></div>
+<div class="count-bar" id="countBar"></div>
+<div class="word-grid" id="wordGrid"></div>
+</div>
+
+<footer class="footer">申论写作提分工具 · 仅供练习参考</footer>
+
+<div id="drawerOverlay" style="position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.15);z-index:250;display:none" onclick="toggleDrawer()"></div>
+<div id="drawerPanel" style="position:fixed;left:-200px;top:0;bottom:0;width:180px;z-index:260;background:var(--bg);border-right:1px solid var(--border);padding:80px 16px 20px;display:flex;flex-direction:column;gap:12px;transition:left .3s ease;box-shadow:4px 0 24px rgba(0,0,0,.06)"><div id="drawerToggle" style="position:absolute;right:-44px;top:50%;transform:translateY(-50%);background:var(--card);border-radius:0 12px 12px 0;padding:14px 8px;cursor:pointer;box-shadow:2px 0 16px rgba(0,0,0,.08);border:1px solid var(--border);border-left:0;display:flex;flex-direction:column;gap:4px;z-index:261" onclick="toggleDrawer()"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></div><a href="https://thanhtientt51-commits.github.io/jiangsu-jobs-2026/?id="+encodeURIComponent((new URLSearchParams(location.search)).get("id")||"")+"" style="text-decoration:none"><div style="padding:12px 14px;border-radius:12px;background:#fff;border:1px solid var(--border);color:var(--text);font-size:.82em;font-weight:700;text-align:center">筛岗</div></a><a href="https://thanhtientt51-commits.github.io/mock-interview/?id="+encodeURIComponent((new URLSearchParams(location.search)).get("id")||"")+"" style="text-decoration:none"><div style="padding:12px 14px;border-radius:12px;background:#fff;border:1px solid var(--border);color:var(--text);font-size:.82em;font-weight:700;text-align:center">面试</div></a><a href="https://thanhtientt51-commits.github.io/xct/?id="+encodeURIComponent((new URLSearchParams(location.search)).get("id")||"")+"" style="text-decoration:none"><div style="padding:12px 14px;border-radius:12px;background:#fff;border:1px solid var(--border);color:var(--text);font-size:.82em;font-weight:700;text-align:center">行测</div></a><a href="https://thanhtientt51-commits.github.io/sl-practice/?id="+encodeURIComponent((new URLSearchParams(location.search)).get("id")||"")+"" style="text-decoration:none"><div style="padding:12px 14px;border-radius:12px;background:#fff;border:1px solid var(--border);color:var(--text);font-size:.82em;font-weight:700;text-align:center">申论</div></a></div>
+<script>var drawerOpen=false;function toggleDrawer(){drawerOpen=!drawerOpen;document.getElementById('drawerPanel').style.left=drawerOpen?'0':'-200px';document.getElementById('drawerOverlay').style.display=drawerOpen?'block':'none'}</script>
+
+<script>
+var words={
+  "行政执法":[
+    {f:"规范执法行为",c:"按规矩办事"},
+    {f:"推行柔性执法",c:"不要动不动就罚款"},
+    {f:"落实首违不罚",c:"第一次犯错可以不罚"},
+    {f:"强化执法监督",c:"有人盯着执法的"},
+    {f:"推进行政执法公示制度",c:"执法结果要公开"},
+    {f:"健全执法全过程记录",c:"执法全程录像"},
+    {f:"完善重大执法决定法制审核",c:"大事要经过法律审查"},
+    {f:"实施包容审慎监管",c:"管得宽松点，给空间"},
+    {f:"规范自由裁量权",c:"不能想罚多少罚多少"},
+    {f:"落实行政执法责任制",c:"谁执法谁负责"},
+  ],
+  "基层治理":[
+    {f:"推进网格化管理",c:"把社区分成小格子管"},
+    {f:"构建共建共治共享格局",c:"大家一起参与治理"},
+    {f:"打通服务群众最后一公里",c:"让老百姓办事方便"},
+    {f:"健全基层群众自治制度",c:"让居民自己管自己的事"},
+    {f:"推动治理重心下移",c:"权力下放到基层"},
+    {f:"强化社区服务功能",c:"让社区能办更多事"},
+    {f:"完善矛盾纠纷多元化解机制",c:"有矛盾多种方式解决"},
+    {f:"提升基层治理精细化水平",c:"管得更细致"},
+    {f:"发挥社会组织协同作用",c:"让社会组织一起帮忙"},
+    {f:"推进数字乡村建设",c:"把农村也搞数字化"},
+    {f:"落实基层减负政策",c:"让基层少填表少开会"},
+    {f:"建立村民议事协商机制",c:"村里的事大家商量着办"},
+  ],
+  "经济发展":[
+    {f:"优化营商环境",c:"让做生意更方便"},
+    {f:"培育新质生产力",c:"发展高科技新产业"},
+    {f:"推动产业结构优化升级",c:"把产业做得更高端"},
+    {f:"激发市场主体活力",c:"让企业有干劲"},
+    {f:"促进民营经济发展壮大",c:"支持民营企业做大"},
+    {f:"强化科技创新引领",c:"靠科技带动发展"},
+    {f:"推动绿色低碳转型",c:"发展要环保"},
+    {f:"完善产业链供应链韧性",c:"产业链不能断"},
+    {f:"扩大内需战略",c:"鼓励国内消费"},
+    {f:"推动区域协调发展",c:"各地发展要平衡"},
+    {f:"加快数字化转型",c:"企业要上网用数据"},
+    {f:"培育专精特新企业",c:"扶持小而专的公司"},
+  ],
+  "民生保障":[
+    {f:"健全多层次社会保障体系",c:"社保覆盖更多方面"},
+    {f:"推进基本公共服务均等化",c:"公共服务不分城乡"},
+    {f:"织密扎牢民生兜底保障网",c:"困难群众有人管"},
+    {f:"完善就业优先政策",c:"优先保证有工作"},
+    {f:"推动教育优质均衡发展",c:"好学校不止在城市"},
+    {f:"构建分级诊疗体系",c:"小病社区看大病医院看"},
+    {f:"发展普惠托育服务",c:"托儿所便宜又方便"},
+    {f:"完善养老服务体系建设",c:"养老有保障"},
+    {f:"推进保障性住房建设",c:"让买不起房的也有地方住"},
+    {f:"实施全民参保计划",c:"人人都上保险"},
+    {f:"健全防止返贫监测帮扶机制",c:"脱贫了不能又变穷"},
+    {f:"兜牢民生底线",c:"保障最基本的生活"},
+  ],
+  "生态环保":[
+    {f:"践行绿水青山就是金山银山理念",c:"环保也是赚钱"},
+    {f:"推进生态文明建设",c:"保护自然环境"},
+    {f:"打好污染防治攻坚战",c:"治理污染"},
+    {f:"推动发展方式绿色转型",c:"生产要环保"},
+    {f:"健全生态补偿机制",c:"保护环境的要给补偿"},
+    {f:"落实碳达峰碳中和目标",c:"减少碳排放"},
+    {f:"实施最严格生态环境保护制度",c:"环保管得很严"},
+    {f:"推进垃圾分类和资源化利用",c:"垃圾要分类回收"},
+    {f:"加强生物多样性保护",c:"保护各种动植物"},
+    {f:"统筹山水林田湖草沙系统治理",c:"自然环境整体保护"},
+  ],
+  "政务服务":[
+    {f:"推进一网通办",c:"网上就能办所有事"},
+    {f:"深化放管服改革",c:"减少审批方便群众"},
+    {f:"推行一次办好",c:"跑一次就办完"},
+    {f:"实现跨省通办",c:"异地也能办"},
+    {f:"优化政务服务流程",c:"办事流程更简单"},
+    {f:"打造数字政府",c:"政府用数据管理"},
+    {f:"推进政务公开",c:"政府的事让群众知道"},
+    {f:"落实好差评制度",c:"办事可以打分"},
+    {f:"推动一窗受理集成服务",c:"一个窗口办所有"},
+    {f:"构建亲清政商关系",c:"政府和企业关系干净"},
+  ],
+  "乡村振兴":[
+    {f:"推进农业农村现代化",c:"把农村搞得更现代"},
+    {f:"实施乡村建设行动",c:"建设美丽乡村"},
+    {f:"发展壮大村级集体经济",c:"让村里有钱"},
+    {f:"促进一二三产业融合发展",c:"种地加工旅游一起搞"},
+    {f:"培养新型职业农民",c:"培养会种地的新农民"},
+    {f:"改善农村人居环境",c:"让农村更干净整洁"},
+    {f:"推动人才返乡入乡",c:"让人回农村发展"},
+    {f:"健全乡村治理体系",c:"管好村里的事"},
+    {f:"确保粮食安全",c:"保证有粮吃"},
+    {f:"推进城乡融合发展",c:"城市农村一起发展"},
+  ],
+  "文化建设":[
+    {f:"弘扬中华优秀传统文化",c:"传承好的老传统"},
+    {f:"推进文化自信自强",c:"对自家文化有信心"},
+    {f:"完善公共文化服务体系",c:"让人人有书读有戏看"},
+    {f:"推动文旅深度融合",c:"文化和旅游一起搞"},
+    {f:"加强网络文明建设",c:"网上也要讲文明"},
+    {f:"培育和践行社会主义核心价值观",c:"树立正确的价值观"},
+    {f:"保护传承非物质文化遗产",c:"保护老手艺老传统"},
+    {f:"推动全民阅读",c:"让大家都读书"},
+    {f:"构建全媒体传播体系",c:"新闻传播要跟上时代"},
+  ],
+  "人才队伍":[
+    {f:"实施人才强国战略",c:"重视人才培养"},
+    {f:"建设高素质专业化干部队伍",c:"培养能干的干部"},
+    {f:"完善人才评价机制",c:"评人才不能只看论文"},
+    {f:"激发人才创新活力",c:"让人才有发挥空间"},
+    {f:"推动产学研深度融合",c:"学校企业研究机构合作"},
+    {f:"破除四唯倾向",c:"不只看学历论文职称奖项"},
+    {f:"培养大国工匠",c:"培养顶尖技术工人"},
+    {f:"健全人才激励机制",c:"干得好有奖励"},
+    {f:"营造识才爱才敬才用才环境",c:"尊重人才用好人才"},
+  ]
+};
+
+var currentTab="all";
+var tabs=Object.keys(words);
+
+// Render tabs
+var tabsHTML='<div class="tab active" onclick="switchTab(\'all\',this)">全部</div>';
+tabs.forEach(function(c){ tabsHTML+='<div class="tab" onclick="switchTab(\''+c+'\',this)">'+c+'</div>'; });
+document.getElementById('tabs').innerHTML=tabsHTML;
+
+function switchTab(cat,el){
+  currentTab=cat;
+  document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active')});
+  el.classList.add('active');
+  renderWords();
+}
+
+function renderWords(){
+  var search=document.getElementById('searchInput').value.trim().toLowerCase();
+  var pool=[];
+  if(currentTab==='all'){
+    tabs.forEach(function(c){ words[c].forEach(function(w){ pool.push(w); }); });
+  }else{
+    pool=words[currentTab];
+  }
+  if(search){
+    pool=pool.filter(function(w){ return w.f.indexOf(search)!==-1||w.c.indexOf(search)!==-1; });
+  }
+  document.getElementById('countBar').textContent='共 '+pool.length+' 组规范词';
+  var html='';
+  pool.forEach(function(w){
+    html+='<div class="word-card"><div class="formal">'+w.f+'</div><div class="casual">'+w.c+'</div></div>';
+  });
+  document.getElementById('wordGrid').innerHTML=html;
+}
+
+renderWords();
+</script></body></html>
