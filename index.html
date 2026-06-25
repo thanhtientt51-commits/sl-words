@@ -1,118 +1,106 @@
 <!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>申论规范词 · 高频表达</title>
 <style>
-:root{--bg:#f5f5f7;--card:#fff;--text:#1d1d1f;--sub:#86868b;--accent:#5865f2;--accent2:#8b5cf6;--border:rgba(0,0,0,.06);--sel-bg:#eef2ff;--sel-text:#4f46e5;--ex-bg:#f0fdf4;--blue-tag:#eff6ff;--blue-tag-text:#3b82f6}
+:root{--bg:#f5f5f7;--card:#fff;--text:#1d1d1f;--sub:#86868b;--accent:#5865f2;--accent2:#8b5cf6;--border:rgba(0,0,0,.06);--radius:16px;--green:#16a34a}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
-/* Top Bar */
-.topbar{background:var(--card);border-bottom:1px solid var(--border);padding:20px 28px 16px;max-width:1300px;margin:0 auto}
-.top-title{display:flex;align-items:center;gap:10px;margin-bottom:14px}
-.top-title h1{font-size:1.4em;font-weight:800;letter-spacing:-.5px}
-.top-title .sub{font-size:.7em;color:var(--sub);margin-left:4px}
-.search-wrap{position:relative;margin-bottom:14px}
+body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;line-height:1.5}
+/* Nav */
+.nav{position:sticky;top:0;z-index:100;background:rgba(245,245,247,.8);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 24px}
+.nav-inner{max-width:1300px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:50px}
+.nav-badge{font-size:.68em;padding:5px 12px;border-radius:20px;background:#fff;border:1px solid var(--border);color:var(--sub)}
+/* Hero */
+.hero{max-width:1300px;margin:0 auto;padding:28px 28px 20px;display:flex;align-items:flex-start;justify-content:space-between;gap:20px}
+.hero-left h1{font-size:1.4em;font-weight:800;letter-spacing:-.5px;margin-bottom:4px}
+.hero-left p{font-size:.78em;color:var(--sub)}
+.hero-right{flex-shrink:0}
+.search-wrap{position:relative}
 .search-wrap svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--sub)}
-.search-wrap input{width:100%;padding:12px 16px 12px 40px;border:2px solid var(--border);border-radius:12px;font-size:.85em;outline:none;background:#fafafa;transition:.2s}
-.search-wrap input:focus{border-color:var(--accent);background:#fff}
-.cat-tabs{display:flex;gap:8px;flex-wrap:wrap}
-.cat-tab{padding:8px 16px;border-radius:10px;font-size:.74em;font-weight:600;cursor:pointer;border:1px solid var(--border);background:#fff;transition:.2s;white-space:nowrap;display:flex;align-items:center;gap:5px}
-.cat-tab:hover{border-color:var(--accent)}
-.cat-tab.active{background:var(--sel-bg);border-color:var(--sel-text);color:var(--sel-text)}
-.cat-tab .cnt{font-size:.85em;color:var(--sub);font-weight:400}
-.cat-tab.active .cnt{color:var(--sel-text);opacity:.7}
-.cat-tab .ic{font-size:.9em}
-/* Main Layout */
-.main{display:grid;grid-template-columns:320px 1fr;max-width:1300px;margin:0 auto;padding:0 28px 20px;gap:20px;min-height:calc(100vh - 230px)}
+.search-wrap input{width:320px;padding:11px 16px 11px 40px;border:2px solid var(--border);border-radius:12px;font-size:.82em;outline:none;background:var(--card);transition:.2s;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.search-wrap input:focus{border-color:var(--accent);box-shadow:0 4px 14px rgba(88,101,242,.1)}
+/* Tabs */
+.tabs-bar{max-width:1300px;margin:0 auto;padding:0 28px 16px;display:flex;gap:8px;flex-wrap:wrap}
+.tab{padding:8px 16px;border-radius:20px;font-size:.74em;font-weight:600;cursor:pointer;border:1px solid var(--border);background:var(--card);color:var(--sub);transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.tab:hover{border-color:var(--accent);color:var(--text);transform:translateY(-1px)}
+.tab.active{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border-color:transparent;box-shadow:0 4px 12px rgba(88,101,242,.2)}
+.tab .cnt{font-size:.85em;opacity:.7;font-weight:400}
+.tab.active .cnt{opacity:.8}
+/* Main */
+.main{max-width:1300px;margin:0 auto;padding:0 28px 32px;display:grid;grid-template-columns:300px 1fr;gap:20px;min-height:calc(100vh - 280px)}
 @media(max-width:768px){.main{grid-template-columns:1fr}}
-/* Left Sidebar */
-.side-left{background:var(--card);border-radius:14px;border:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden;max-height:calc(100vh - 250px);position:sticky;top:0}
-.side-left-head{padding:14px 16px;border-bottom:1px solid var(--border)}
-.side-left-head .hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
-.side-left-head .hdr span{font-size:.8em;font-weight:700}
-.side-left-head .hdr small{font-size:.68em;color:var(--sub)}
-.side-left-head input{width:100%;padding:8px 12px;border:2px solid var(--border);border-radius:8px;font-size:.76em;outline:none;background:#fafafa}
-.side-left-head input:focus{border-color:var(--accent)}
-.word-list{flex:1;overflow-y:auto;-ms-overflow-style:none;scrollbar-width:none}
+/* Left */
+.side-left{display:flex;flex-direction:column;gap:0}
+.panel{background:var(--card);border-radius:var(--radius);border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.04);overflow:hidden;display:flex;flex-direction:column;height:calc(100vh - 300px);position:sticky;top:160px}
+.panel-head{padding:16px 18px 12px;border-bottom:1px solid var(--border)}
+.panel-head .hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.panel-head .hdr span{font-size:.82em;font-weight:700;letter-spacing:-.2px}
+.panel-head .hdr small{font-size:.68em;color:var(--sub)}
+.panel-head input{width:100%;padding:9px 14px;border:2px solid var(--border);border-radius:10px;font-size:.76em;outline:none;background:#fafafa;transition:.2s}
+.panel-head input:focus{border-color:var(--accent);background:#fff}
+.word-list{flex:1;overflow-y:auto;-ms-overflow-style:none;scrollbar-width:none;min-height:0}
 .word-list::-webkit-scrollbar{display:none}
-.word-item{padding:10px 16px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(0,0,0,.03);font-size:.78em;transition:.1s}
-.word-item:hover{background:var(--bg)}
-.word-item.active{background:var(--sel-bg);color:var(--sel-text);font-weight:700}
-.word-item .star{font-size:.85em;cursor:pointer;flex-shrink:0;transition:.15s}
-.word-item .star:hover{transform:scale(1.2)}
-.pagination{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;border-top:1px solid var(--border);font-size:.7em;color:var(--sub)}
-.pagination button{padding:4px 12px;border-radius:6px;border:1px solid var(--border);background:#fff;cursor:pointer;font-size:.9em}
-.pagination button:hover{border-color:var(--accent)}
-.pagination button:disabled{opacity:.4;cursor:not-allowed}
-/* Right Content */
-.side-right{background:var(--card);border-radius:14px;border:1px solid var(--border);padding:24px 28px}
-.right-header{margin-bottom:20px}
-.right-header h2{font-size:1.2em;font-weight:800;margin-bottom:8px}
-.right-header .meta{display:flex;align-items:center;gap:10px}
-.right-header .badge{font-size:.68em;padding:3px 10px;border-radius:8px;background:var(--sel-bg);color:var(--sel-text)}
-.right-header .fav{font-size:.9em;cursor:pointer;transition:.15s}
-.right-header .fav:hover{transform:scale(1.2)}
-.module{margin-bottom:18px}
-.module-head{display:flex;align-items:center;gap:8px;margin-bottom:8px;font-size:.78em;font-weight:700;color:var(--text)}
-.module-head .m-icon{width:16px;height:16px;color:var(--sub)}
-.module-body{padding:12px 16px;background:#fafafa;border-radius:10px;font-size:.8em;line-height:1.8;color:#444}
-.module-body.ex-box{background:var(--ex-bg);color:#333}
-.tags-row{display:flex;gap:6px;flex-wrap:wrap}
-.tag-chip{padding:6px 14px;border-radius:16px;font-size:.78em;background:var(--blue-tag);color:var(--blue-tag-text);font-weight:500}
-.empty-state{display:flex;align-items:center;justify-content:center;height:100%;color:var(--sub);font-size:.85em}
+.witem{padding:11px 18px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:.78em;transition:.15s;border-bottom:1px solid rgba(0,0,0,.03);gap:8px}
+.witem:hover{background:var(--bg)}
+.witem.active{background:linear-gradient(135deg,rgba(88,101,242,.06),rgba(139,92,246,.04));color:var(--accent);font-weight:700;border-left:3px solid var(--accent)}
+.witem .wstar{font-size:.82em;cursor:pointer;flex-shrink:0;transition:.15s;opacity:.4}
+.witem .wstar:hover{transform:scale(1.2);opacity:1}
+.witem .wstar.on{opacity:1}
+.pagination{display:flex;justify-content:space-between;align-items:center;padding:10px 18px;border-top:1px solid var(--border);font-size:.7em;color:var(--sub)}
+.pagination button{padding:5px 14px;border-radius:8px;border:1px solid var(--border);background:#fff;cursor:pointer;font-size:.9em;transition:.15s;font-weight:600}
+.pagination button:hover{border-color:var(--accent);color:var(--accent)}
+.pagination button:disabled{opacity:.3;cursor:not-allowed}
+/* Right */
+.side-right{background:var(--card);border-radius:var(--radius);border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.04);padding:28px 32px;overflow-y:auto}
+.empty-hint{display:flex;align-items:center;justify-content:center;height:300px;flex-direction:column;color:var(--sub);font-size:.82em;gap:12px}
+.rhead{margin-bottom:22px}
+.rhead h2{font-size:1.3em;font-weight:800;letter-spacing:-.5px;margin-bottom:10px}
+.rhead .rmeta{display:flex;align-items:center;gap:10px}
+.rhead .rbadge{font-size:.7em;padding:4px 12px;border-radius:10px;background:#f0f4ff;color:var(--accent);font-weight:600}
+.rhead .rfav{font-size:.95em;cursor:pointer;transition:.15s}
+.rhead .rfav:hover{transform:scale(1.2)}
+.module{margin-bottom:20px}
+.mhead{display:flex;align-items:center;gap:8px;margin-bottom:10px;font-size:.8em;font-weight:700;color:var(--text)}
+.mhead svg{color:var(--accent);flex-shrink:0}
+.mbody{padding:14px 18px;background:#fafafa;border-radius:12px;font-size:.82em;line-height:1.9;color:#444;border:1px solid rgba(0,0,0,.03)}
+.mbody.exbox{background:linear-gradient(135deg,#f0fdf4,#ecfdf5);border:1px solid rgba(22,163,74,.1);color:#333}
+.tags-row{display:flex;gap:6px;flex-wrap:wrap;padding:0}
+.tag-chip{padding:7px 15px;border-radius:18px;font-size:.76em;background:linear-gradient(135deg,rgba(88,101,242,.06),rgba(139,92,246,.04));color:var(--accent);font-weight:600;border:1px solid rgba(88,101,242,.1)}
 /* Drawer */
-.drawer-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.15);z-index:250;display:none}
-.drawer-panel{position:fixed;left:-200px;top:0;bottom:0;width:180px;z-index:260;background:var(--bg);border-right:1px solid var(--border);padding:80px 16px 20px;display:flex;flex-direction:column;gap:10px;transition:left .3s ease;box-shadow:4px 0 24px rgba(0,0,0,.06)}
-.drawer-toggle{position:absolute;right:-44px;top:50%;transform:translateY(-50%);background:var(--card);border-radius:0 12px 12px 0;padding:14px 8px;cursor:pointer;box-shadow:2px 0 16px rgba(0,0,0,.08);border:1px solid var(--border);border-left:0;display:flex;flex-direction:column;gap:4px;z-index:261}
-.drawer-btn{padding:12px 14px;border-radius:12px;background:#fff;border:1px solid var(--border);color:var(--text);font-size:.82em;font-weight:700;text-align:center;text-decoration:none;display:block}
-.footer{text-align:center;padding:20px;color:#b0b0b8;font-size:.65em;border-top:1px solid var(--border)}
+.do{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.12);z-index:250;display:none}
+.dp{position:fixed;left:-200px;top:0;bottom:0;width:180px;z-index:260;background:var(--bg);border-right:1px solid var(--border);padding:80px 16px 20px;display:flex;flex-direction:column;gap:10px;transition:left .3s ease;box-shadow:4px 0 24px rgba(0,0,0,.06)}
+.dt{position:absolute;right:-44px;top:50%;transform:translateY(-50%);background:var(--card);border-radius:0 12px 12px 0;padding:13px 8px;cursor:pointer;box-shadow:2px 0 16px rgba(0,0,0,.08);border:1px solid var(--border);border-left:0;display:flex;flex-direction:column;gap:4px;z-index:261}
+.dbtn{padding:12px 14px;border-radius:12px;background:var(--card);border:1px solid var(--border);color:var(--text);font-size:.78em;font-weight:700;text-align:center;text-decoration:none;display:block;transition:.15s;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.dbtn:hover{transform:translateY(-1px);border-color:var(--accent);box-shadow:0 4px 12px rgba(88,101,242,.1)}
+.dbtn.on{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border-color:transparent}
+.footer{text-align:center;padding:24px;color:#b0b0b8;font-size:.65em;border-top:1px solid var(--border)}
 </style></head><body>
 
-<!-- Top Nav -->
-<nav class="nav" style="position:sticky;top:0;z-index:100;background:rgba(245,245,247,.8);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 24px"><div class="nav-inner" style="max-width:1300px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:48px"><div style="font-size:.85em;font-weight:700">📝 申论规范词</div><div class="nav-badge" style="font-size:.65em;padding:4px 10px;border-radius:12px;background:#fff;border:1px solid var(--border);color:var(--sub)">规范表达 · 提分利器</div></div></nav>
+<nav class="nav"><div class="nav-inner"><div style="font-size:.88em;font-weight:700;display:flex;align-items:center;gap:6px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>申论规范词</div><div class="nav-badge">规范表达 · 提分利器</div></div></nav>
 
-<!-- Top Bar -->
-<div class="topbar">
-  <div class="top-title"><h1>申论规范词</h1><span class="sub">规范表达，提升申论语言层次</span></div>
-  <div class="search-wrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input id="globalSearch" placeholder="全局搜索规范词..." oninput="applyFilters()"></div>
-  <div class="cat-tabs" id="catTabs"></div>
+<div class="hero">
+  <div class="hero-left"><h1>申论规范词</h1><p>规范表达，提升申论语言层次</p></div>
+  <div class="hero-right"><div class="search-wrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input id="globalSearch" placeholder="全局搜索规范词..." oninput="applyFilters()"></div></div>
 </div>
+<div class="tabs-bar" id="catTabs"></div>
 
-<!-- Main -->
 <div class="main">
-  <!-- Left Sidebar -->
   <div class="side-left">
-    <div class="side-left-head">
-      <div class="hdr"><span id="sideCatTitle">全部</span><small id="sideTotal">共 0 个规范词</small></div>
-      <input id="sideFilter" placeholder="筛选..." oninput="applyFilters()">
-    </div>
-    <div class="word-list" id="wordList"></div>
-    <div class="pagination">
-      <button id="btnPrev" onclick="pagePrev()">&lt; 上一页</button>
-      <span id="pageInfo">1 / 1</span>
-      <button id="btnNext" onclick="pageNext()">下一页 &gt;</button>
+    <div class="panel">
+      <div class="panel-head"><div class="hdr"><span id="sideCatTitle">全部</span><small id="sideTotal">共 0 个规范词</small></div><input id="sideFilter" placeholder="筛选词条..." oninput="applyFilters()"></div>
+      <div class="word-list" id="wordList"></div>
+      <div class="pagination"><button id="btnPrev" onclick="pagePrev()">&lt; 上一页</button><span id="pageInfo">1 / 1</span><button id="btnNext" onclick="pageNext()">下一页 &gt;</button></div>
     </div>
   </div>
-  <!-- Right Content -->
-  <div class="side-right" id="rightContent">
-    <div class="empty-state">👈 左侧选择一个规范词查看详情</div>
-  </div>
+  <div class="side-right" id="rightContent"><div class="empty-hint"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--sub)" stroke-width="1.2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg><p>👈 左侧选择一个规范词查看详情</p></div></div>
 </div>
 
 <footer class="footer">申论写作提分工具 · 仅供练习参考</footer>
 
-<!-- Drawer Sidebar -->
-<div class="drawer-overlay" id="drawerOverlay" onclick="toggleDrawer()"></div>
-<div class="drawer-panel" id="drawerPanel">
-  <div class="drawer-toggle" id="drawerToggle" onclick="toggleDrawer()"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></div>
-  <a href="https://thanhtientt51-commits.github.io/jiangsu-jobs-2026/?id="+encodeURIComponent((new URLSearchParams(location.search)).get("id")||"")+"" class="drawer-btn">筛岗</a>
-  <a href="https://thanhtientt51-commits.github.io/mock-interview/?id="+encodeURIComponent((new URLSearchParams(location.search)).get("id")||"")+"" class="drawer-btn">面试</a>
-  <a href="https://thanhtientt51-commits.github.io/xct/?id="+encodeURIComponent((new URLSearchParams(location.search)).get("id")||"")+"" class="drawer-btn">行测</a>
-  <a href="https://thanhtientt51-commits.github.io/sl-practice/?id="+encodeURIComponent((new URLSearchParams(location.search)).get("id")||"")+"" class="drawer-btn">申论</a>
-</div>
+<div class="do" id="drawerOverlay" onclick="toggleDrawer()"></div>
+<div class="dp" id="drawerPanel"><div class="dt" onclick="toggleDrawer()"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></div><a href="https://thanhtientt51-commits.github.io/jiangsu-jobs-2026/?id="+encodeURIComponent((new URLSearchParams(location.search)).get("id")||"")+"" class="dbtn">筛岗</a><a href="https://thanhtientt51-commits.github.io/mock-interview/?id="+encodeURIComponent((new URLSearchParams(location.search)).get("id")||"")+"" class="dbtn">面试</a><a href="https://thanhtientt51-commits.github.io/xct/?id="+encodeURIComponent((new URLSearchParams(location.search)).get("id")||"")+"" class="dbtn">行测</a><a href="https://thanhtientt51-commits.github.io/sl-practice/?id="+encodeURIComponent((new URLSearchParams(location.search)).get("id")||"")+"" class="dbtn">申论</a></div>
 
 <script>
 var drawerOpen=false;
 function toggleDrawer(){drawerOpen=!drawerOpen;document.getElementById('drawerPanel').style.left=drawerOpen?'0':'-200px';document.getElementById('drawerOverlay').style.display=drawerOpen?'block':'none'}
 
-// ====== DATA ======
 var DB=[
 {c:"产业发展类",w:"推动产业转型升级",s:"某地传统制造业效益下滑，大量工厂面临淘汰",co:["加快推动产业转型升级","促进产业转型升级步伐"],d:"通过技术创新和结构调整，使产业从低端向高端转变",ex:"该地区通过推动产业转型升级，引导传统制造企业向智能制造方向迈进，实现了经济效益与产业竞争力的双提升。"},
 {c:"产业发展类",w:"培育壮大新兴产业",s:"某市缺乏新的经济增长点，传统产业增长乏力",co:["加快培育壮大新兴产业","着力培育壮大新兴产业"],d:"扶持和发展具有高成长性、高技术含量的新兴行业",ex:"该市积极培育壮大新兴产业，重点布局人工智能、生物医药等领域，为经济高质量发展注入了新动能。"},
@@ -124,7 +112,6 @@ var DB=[
 {c:"产业发展类",w:"推动数字产业化",s:"某地数据资源丰富但没有形成产业",co:["加快推动数字产业化","推进数字产业化发展"],d:"将数据作为生产要素，培育发展数字技术相关产业",ex:"该区推动数字产业化发展，集聚大数据、云计算企业超300家，数字经济核心产业增加值突破百亿。"},
 {c:"产业发展类",w:"降低制度性交易成本",s:"企业反映审批环节多、时间成本高",co:["着力降低制度性交易成本","有效降低制度性交易成本"],d:"通过简政放权、优化流程减少企业在行政审批等方面的成本",ex:"该市推行一网通办改革，降低制度性交易成本，企业开办时间压缩至1个工作日。"},
 {c:"产业发展类",w:"促进产城融合发展",s:"某开发区白天人多晚上没人，配套缺乏",co:["深入推进产城融合发展","促进产城融合良性互动"],d:"将产业发展与城市功能建设有机结合，实现以产促城、以城兴产",ex:"该高新区以促进产城融合发展为目标，完善商业、教育、医疗等配套设施，实现从'产业孤岛'到'活力新城'的转变。"},
-
 {c:"基层治理类",w:"推进网格化管理",s:"某社区管理粗放，居民有事不知道找谁",co:["全面推进网格化管理","深化网格化管理工作"],d:"将管理区域划分为若干网格单元，实现精细化管理服务",ex:"该街道推进网格化管理，将辖区划分为56个网格，每个网格配备专职网格员，群众诉求响应时间缩短至2小时。"},
 {c:"基层治理类",w:"构建共建共治共享格局",s:"社区治理全靠居委会，居民参与度低",co:["加快构建共建共治共享格局","形成共建共治共享的社会治理格局"],d:"多元主体共同参与社会治理，共同享有治理成果",ex:"该社区通过构建共建共治共享格局，引导居民、物业、商户多方参与，社区矛盾纠纷同比下降40%。"},
 {c:"基层治理类",w:"打通服务群众最后一公里",s:"村民办事要跑很远，很不方便",co:["着力打通服务群众最后一公里","切实打通服务群众最后一公里"],d:"将公共服务延伸到基层最末端，方便群众就近办理",ex:"该县在294个村设立便民服务站，打通服务群众最后一公里，村民办事不出村。"},
@@ -133,163 +120,91 @@ var DB=[
 {c:"基层治理类",w:"推进数字乡村建设",s:"农村网络差，政务办理还是纸质化",co:["加快推进数字乡村建设","全面推进数字乡村建设"],d:"运用数字技术提升乡村治理和发展水平",ex:"该县推进数字乡村建设，实现5G网络全覆盖，建成数字乡村管理平台，惠及全县35万农民。"},
 {c:"基层治理类",w:"发挥社会组织协同作用",s:"公益组织想参与社区服务但没有渠道",co:["充分发挥社会组织协同作用","引导发挥社会组织协同作用"],d:"鼓励和支持社会组织参与社会治理和公共服务",ex:"该市发挥社会组织协同作用，政府购买社会组织服务项目120个，服务覆盖养老、助残、环保等领域。"},
 {c:"基层治理类",w:"落实基层减负政策",s:"村干部每天要填十几份表格，没时间干实事",co:["严格落实基层减负政策","切实落实基层减负政策"],d:"减少基层不必要的报表、会议和考核，释放基层工作活力",ex:"该市落实基层减负政策，清理整合各类报表台账32项，基层干部每周用于填表的时间减少60%。"},
-
 {c:"政府治理类",w:"深化放管服改革",s:"群众开个店要跑七八个部门盖十几个章",co:["持续深化放管服改革","深入推进放管服改革"],d:"简政放权、放管结合、优化服务，提升政府治理效能",ex:"该市深化放管服改革，将企业开办流程压缩至0.5个工作日，市场主体数量同比增长18%。"},
 {c:"政府治理类",w:"推进一网通办",s:"群众办事要跑多个窗口反复提交材料",co:["全面推进一网通办","加快实现一网通办"],d:"将政务服务事项整合到一个网络平台办理",ex:"该省推进一网通办改革，1200余项政务服务事项实现网上办理，群众平均跑动次数降至0.6次。"},
 {c:"政府治理类",w:"推行首问负责制",s:"群众咨询问题被推来推去不知道找谁",co:["严格落实首问负责制","全面推行首问负责制"],d:"第一个接待的工作人员负责到底，不得推诿",ex:"该局推行首问负责制，群众满意度从78%提升至95%，投诉量下降50%。"},
 {c:"政府治理类",w:"打造阳光政府",s:"政府信息不公开，群众对决策不了解",co:["着力打造阳光政府","加快建设阳光政府"],d:"推进政务公开，增强政府工作透明度",ex:"该市打造阳光政府，主动公开财政预算、重大决策等信息1.2万条，接受社会监督。"},
 {c:"政府治理类",w:"构建亲清政商关系",s:"企业家反映跟政府打交道既要拉关系又怕被查",co:["积极构建亲清政商关系","大力构建亲清政商关系"],d:"政府与企业在亲近服务的同时保持清正廉洁",ex:"该区构建亲清政商关系，建立政企常态化沟通机制，既主动服务企业又严守廉洁底线。"},
-{c:"政府治理类",w:"推进跨部门协同监管",s:"食品安全涉及到市场监管局管生产、卫健委管卫生，职责交叉",co:["大力推进跨部门协同监管","完善跨部门协同监管机制"],d:"多个政府部门联合开展监督管理，避免重复和漏洞",ex:"该市推进跨部门协同监管，建立市场监管、公安、卫健等六部门联动机制，食品抽检合格率提升至98%。"},
-
+{c:"政府治理类",w:"推进跨部门协同监管",s:"食品安全涉及到多个部门职责交叉",co:["大力推进跨部门协同监管","完善跨部门协同监管机制"],d:"多个政府部门联合开展监督管理，避免重复和漏洞",ex:"该市推进跨部门协同监管，建立市场监管、公安、卫健等六部门联动机制，食品抽检合格率提升至98%。"},
 {c:"文化发展类",w:"弘扬中华优秀传统文化",s:"年轻人只过洋节不过传统节日",co:["大力弘扬中华优秀传统文化","传承弘扬中华优秀传统文化"],d:"继承和发扬中华民族的优秀文化传统",ex:"该市通过举办非遗文化节、传统手工艺进校园等活动弘扬中华优秀传统文化，参与群众超50万人次。"},
 {c:"文化发展类",w:"完善公共文化服务体系",s:"农村没有图书馆和文化活动场所",co:["加快完善公共文化服务体系","健全公共文化服务体系"],d:"建设覆盖城乡的公共文化设施和服务网络",ex:"该县完善公共文化服务体系，建成乡镇综合文化站15个、村级文化服务中心280个，实现文化服务全覆盖。"},
 {c:"文化发展类",w:"推进文化自信自强",s:"总觉得国外的东西比国内好",co:["坚定推进文化自信自强","增强文化自信自强"],d:"对自身文化价值有坚定信心并不断创新发展",ex:"该省推进文化自信自强，打造具有地域特色的文化品牌，文化产业增加值年均增长12%。"},
-{c:"文化发展类",w:"推动文旅深度融合",s:"景区只有风景没有文化内涵，留不住游客",co:["加快推动文旅深度融合","促进文旅深度融合"],d:"将文化资源与旅游产业有机结合",ex:"该市推动文旅深度融合，将非遗项目融入景区体验，过夜游客比例从35%提升至62%。"},
+{c:"文化发展类",w:"推动文旅深度融合",s:"景区只有风景没有文化内涵",co:["加快推动文旅深度融合","促进文旅深度融合"],d:"将文化资源与旅游产业有机结合",ex:"该市推动文旅深度融合，将非遗项目融入景区体验，过夜游客比例从35%提升至62%。"},
 {c:"文化发展类",w:"保护传承非物质文化遗产",s:"老手工艺后继无人濒临失传",co:["加强保护传承非物质文化遗产","有效保护传承非物质文化遗产"],d:"对非遗项目进行抢救性保护和活态传承",ex:"该县保护传承非物质文化遗产，建立非遗工坊12个，培养传承人86名，带动就业300余人。"},
-
 {c:"生态治理类",w:"改造城市闲置空间生态化",s:"某社区打造口袋公园，利用闲置空地种植花草设置座椅",co:["推进改造城市闲置空间生态化","实现改造城市闲置空间生态化"],d:"将城市闲置空间改造为生态绿地",ex:"该社区通过改造城市闲置空间生态化，将废弃空地打造成集绿化与休憩功能于一体的口袋公园，有效提升了居民的生活品质。"},
 {c:"生态治理类",w:"倡导绿色低碳消费方式",s:"消费者过度使用一次性产品，资源浪费严重",co:["积极倡导绿色低碳消费方式","推广绿色低碳消费方式"],d:"引导公众选择低碳环保的消费行为和生活方式",ex:"该市通过发放绿色消费券、推广节能家电补贴等方式倡导绿色低碳消费方式，居民节能产品购买率提升30%。"},
 {c:"生态治理类",w:"构建环城生态防护带",s:"城市周边缺乏绿化隔离，风沙扬尘严重",co:["加快构建环城生态防护带","建设环城生态防护带"],d:"在城市外围建设环形绿化带用于生态防护",ex:"该市构建环城生态防护带，建成宽100米、长56公里的环城林带，有效降低了扬尘和噪音污染。"},
 {c:"生态治理类",w:"建立企业低碳激励机制",s:"企业觉得环保投入大不划算不肯主动减排",co:["加快建立企业低碳激励机制","完善企业低碳激励机制"],d:"通过政策和经济手段激励企业减少碳排放",ex:"该省建立企业低碳激励机制，对碳排放达标企业给予税收优惠和绿色信贷支持，企业参与率达85%。"},
 {c:"生态治理类",w:"应用水体生态修复技术",s:"城市河道黑臭，鱼虾绝迹",co:["推广运用水体生态修复技术","采用水体生态修复技术"],d:"利用生物、生态学方法恢复水体的自净能力",ex:"该市应用水体生态修复技术治理黑臭河道12条，水质从劣五类改善至四类及以上，水生生物多样性恢复明显。"},
-{c:"生态治理类",w:"探索生态产品价值实现路径",s:"守着绿水青山却不知道怎么变成经济效益",co:["积极探索生态产品价值实现路径","拓宽生态产品价值实现路径"],d:"将生态优势转化为经济优势的途径和方法",ex:"该县探索生态产品价值实现路径，开展森林碳汇交易和生态旅游，生态产品总值（GEP）年均增长8%。"},
+{c:"生态治理类",w:"探索生态产品价值实现路径",s:"守着绿水青山却不知道怎么变成经济效益",co:["积极探索生态产品价值实现路径","拓宽生态产品价值实现路径"],d:"将生态优势转化为经济优势的途径和方法",ex:"该县探索生态产品价值实现路径，开展森林碳汇交易和生态旅游，生态产品总值年均增长8%。"},
 {c:"生态治理类",w:"优化生活垃圾分类服务",s:"居民分类垃圾桶形同虚设，混投混运",co:["持续优化生活垃圾分类服务","提升生活垃圾分类服务水平"],d:"完善垃圾分类投放、收集、运输和处理的服务体系",ex:"该区优化生活垃圾分类服务，引入智能分类投放设备和积分激励机制，居民垃圾分类参与率提升至92%。"},
 {c:"生态治理类",w:"建立跨区域生态补偿",s:"上游保护水源限制发展，下游受益却不给补偿",co:["加快建立跨区域生态补偿","健全跨区域生态补偿机制"],d:"受益地区对生态保护地区给予经济补偿的制度安排",ex:"该省建立跨区域生态补偿机制，下游受益市每年向上游保护县拨付生态补偿资金5000万元，实现了保护与发展的良性互动。"},
-
 {c:"社会民生类",w:"健全多层次社会保障体系",s:"农村老人养老只能靠子女，没有社会保障",co:["加快健全多层次社会保障体系","完善多层次社会保障体系"],d:"建立覆盖全民、城乡统筹的多层次社会保障制度",ex:"该省健全多层次社会保障体系，城乡居民基本养老保险参保率达98%，社会救助标准年均提高8%。"},
 {c:"社会民生类",w:"推进基本公共服务均等化",s:"城里学校好医院多，农村差远了",co:["着力推进基本公共服务均等化","实现基本公共服务均等化"],d:"使城乡居民都能公平享受大致均等的基本公共服务",ex:"该市推进基本公共服务均等化，投入30亿元改善农村教育医疗设施，城乡公共服务差距缩小15个百分点。"},
 {c:"社会民生类",w:"织密扎牢民生兜底保障网",s:"困难群众遇到大病大灾一下子就返贫了",co:["织密扎牢民生兜底保障网","巩固民生兜底保障网"],d:"建立完善的社会救助体系确保困难群众基本生活",ex:"该区织密扎牢民生兜底保障网，建立低收入人口动态监测机制，及时发现并救助困难群众1200余户。"},
 {c:"社会民生类",w:"完善就业优先政策",s:"高校毕业生找工作难企业招人也难",co:["持续完善就业优先政策","落实就业优先政策"],d:"把促进就业放在经济社会发展的优先位置",ex:"该市完善就业优先政策，实施百万青年见习计划和创业担保贷款，城镇新增就业12万人。"},
 {c:"社会民生类",w:"推动教育优质均衡发展",s:"好老师都集中在城里几所重点学校",co:["大力推动教育优质均衡发展","促进教育优质均衡发展"],d:"缩小区域、城乡、校际之间的教育质量差距",ex:"该县推动教育优质均衡发展，推行城乡学校共同体建设，农村学校本科上线率提升8个百分点。"},
 {c:"社会民生类",w:"构建分级诊疗体系",s:"感冒也去大医院排队，基层医院门可罗雀",co:["加快构建分级诊疗体系","完善分级诊疗体系"],d:"建立基层首诊、双向转诊、急慢分治的分级诊疗制度",ex:"该市构建分级诊疗体系，基层医疗机构就诊率从42%提升至65%，大医院平均候诊时间缩短40%。"},
-
 {c:"科技创新类",w:"强化企业创新主体地位",s:"科研都在高校实验室，企业参与不进来",co:["强化企业创新主体地位","确立企业创新主体地位"],d:"发挥企业在技术创新决策、研发投入、成果转化中的主导作用",ex:"该省强化企业创新主体地位，支持龙头企业牵头组建创新联合体15个，企业研发投入占全社会比重达78%。"},
 {c:"科技创新类",w:"突破关键核心技术瓶颈",s:"高端芯片被别人卡脖子买不到",co:["集中力量突破关键核心技术瓶颈","攻克关键核心技术瓶颈"],d:"在核心技术和关键环节上实现自主可控",ex:"该省集中力量突破关键核心技术瓶颈，在半导体材料、工业软件等领域取得重大突破，填补国内空白12项。"},
 {c:"科技创新类",w:"完善科技成果转化机制",s:"高校科研成果躺在纸上变不成产品",co:["加快完善科技成果转化机制","健全科技成果转化机制"],d:"打通从科研到产业化应用的通道",ex:"该市完善科技成果转化机制，建立技术交易市场和成果转化基金，科技成果转化率从25%提升至52%。"},
 {c:"科技创新类",w:"营造鼓励创新宽容失败的氛围",s:"科研人员怕失败不敢尝试新方向",co:["大力营造鼓励创新宽容失败的氛围","营造鼓励创新宽容失败的环境"],d:"形成支持创新探索、容忍合理失败的社会文化",ex:"该区营造鼓励创新宽容失败的氛围，设立创新风险补偿基金，对符合科研规律的失败项目给予合理免责。"},
-{c:"科技创新类",w:"推动产学研深度融合",s:"学校研究的东西企业用不上，企业需要的学校不研究",co:["深入推进产学研深度融合","促进产学研深度融合"],d:"企业、高校、科研机构紧密合作，形成创新合力",ex:"该市推动产学研深度融合，建立校企联合实验室28个，促成合作项目120项，合同金额超15亿元。"},
+{c:"科技创新类",w:"推动产学研深度融合",s:"学校研究的东西企业用不上，企业需要的学校不研究",co:["深入推进产学研深度融合","促进产学研深度融合"],d:"企业、高校、科研机构紧密合作形成创新合力",ex:"该市推动产学研深度融合，建立校企联合实验室28个，促成合作项目120项，合同金额超15亿元。"},
 ];
 
-// ====== CATEGORIES ======
 var cats=[],catMap={};
-DB.forEach(function(item){
-  if(!catMap[item.c]){catMap[item.c]=[];cats.push(item.c)}
-  catMap[item.c].push(item);
-});
+DB.forEach(function(item){if(!catMap[item.c]){catMap[item.c]=[];cats.push(item.c)};catMap[item.c].push(item)});
 
-// ====== STATE ======
 var curCat='all',curWord=null,curPage=0,perPage=12;
 var favorites=JSON.parse(localStorage.getItem('sl_favs')||'[]');
-
 function isFav(w){return favorites.indexOf(w)!==-1}
-function toggleFav(w){
-  var idx=favorites.indexOf(w);
-  if(idx===-1)favorites.push(w);else favorites.splice(idx,1);
-  localStorage.setItem('sl_favs',JSON.stringify(favorites));
-  applyFilters();
-}
+function toggleFav(w){var idx=favorites.indexOf(w);if(idx===-1)favorites.push(w);else favorites.splice(idx,1);localStorage.setItem('sl_favs',JSON.stringify(favorites));applyFilters()}
 
-// ====== RENDER TABS ======
 function renderTabs(){
-  var totalAll=DB.length;
-  var html='<div class="cat-tab'+((curCat==='all')?' active':'')+'" onclick="selCat(\'all\')">全部<span class="cnt">'+totalAll+'个</span></div>';
-  cats.forEach(function(c){
-    var n=catMap[c].length;
-    var icons={产业发展类:'🏭',基层治理类:'🏘️',政府治理类:'🏛️',文化发展类:'🎨',生态治理类:'🌿',社会民生类:'❤️',科技创新类:'💡'};
-    html+='<div class="cat-tab'+((curCat===c)?' active':'')+'" onclick="selCat(\''+c+'\')"><span class="ic">'+(icons[c]||'')+'</span>'+c+'<span class="cnt">'+n+'个</span></div>';
-  });
-  if(favorites.length>0){
-    html+='<div class="cat-tab'+((curCat==='fav')?' active':'')+'" onclick="selCat(\'fav\')">⭐ 我的收藏<span class="cnt">'+favorites.length+'个</span></div>';
-  }
+  var totalAll=DB.length,html='<div class="tab'+(curCat==='all'?' active':'')+'" onclick="selCat(\'all\')">全部<span class="cnt">'+totalAll+'个</span></div>';
+  var icons={产业发展类:'🏭',基层治理类:'🏘️',政府治理类:'🏛️',文化发展类:'🎨',生态治理类:'🌿',社会民生类:'❤️',科技创新类:'💡'};
+  cats.forEach(function(c){var n=catMap[c].length;html+='<div class="tab'+(curCat===c?' active':'')+'" onclick="selCat(\''+c+'\')"><span>'+(icons[c]||'')+'</span> '+c+'<span class="cnt">'+n+'个</span></div>'});
+  if(favorites.length>0)html+='<div class="tab'+(curCat==='fav'?' active':'')+'" onclick="selCat(\'fav\')">⭐ 我的收藏<span class="cnt">'+favorites.length+'个</span></div>';
   document.getElementById('catTabs').innerHTML=html;
 }
 
-function selCat(c){
-  curCat=c;curPage=0;curWord=null;
-  renderTabs();applyFilters();
-  document.getElementById('rightContent').innerHTML='<div class="empty-state">👈 左侧选择一个规范词查看详情</div>';
-}
+function selCat(c){curCat=c;curPage=0;curWord=null;renderTabs();applyFilters();document.getElementById('rightContent').innerHTML='<div class="empty-hint"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--sub)" stroke-width="1.2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg><p>👈 左侧选择一个规范词查看详情</p></div>'}
 
-// ====== FILTER ======
 function getFiltered(){
-  var pool;
-  if(curCat==='all')pool=DB.slice();
-  else if(curCat==='fav')pool=DB.filter(function(item){return isFav(item.w)});
-  else pool=(catMap[curCat]||[]).slice();
-
-  var gs=document.getElementById('globalSearch').value.trim().toLowerCase();
-  var sf=document.getElementById('sideFilter').value.trim().toLowerCase();
+  var pool;if(curCat==='all')pool=DB.slice();else if(curCat==='fav')pool=DB.filter(function(item){return isFav(item.w)});else pool=(catMap[curCat]||[]).slice();
+  var gs=document.getElementById('globalSearch').value.trim().toLowerCase(),sf=document.getElementById('sideFilter').value.trim().toLowerCase();
   if(gs)pool=pool.filter(function(item){return item.w.indexOf(gs)!==-1||item.s.indexOf(gs)!==-1||item.d.indexOf(gs)!==-1});
   if(sf)pool=pool.filter(function(item){return item.w.indexOf(sf)!==-1||item.s.indexOf(sf)!==-1});
   return pool;
 }
 
 function applyFilters(){
-  var pool=getFiltered();
-  var total=pool.length;
-  var pages=Math.ceil(total/perPage)||1;
-  if(curPage>=pages)curPage=0;
-
-  // Sidebar header
+  var pool=getFiltered(),total=pool.length,pages=Math.ceil(total/perPage)||1;if(curPage>=pages)curPage=0;
   document.getElementById('sideCatTitle').textContent=curCat==='all'?'全部':(curCat==='fav'?'我的收藏':curCat);
   document.getElementById('sideTotal').textContent='共 '+total+' 个规范词';
-
-  // Word list
-  var start=curPage*perPage;
-  var pageItems=pool.slice(start,start+perPage);
-  var html='';
-  pageItems.forEach(function(item){
-    var fav=isFav(item.w);
-    html+='<div class="word-item'+(curWord===item.w?' active':'')+'" onclick="selectWord(\''+item.w+'\')"><span>'+item.w+'</span><span class="star" onclick="event.stopPropagation();toggleFav(\''+item.w+'\')" title="收藏">'+(fav?'⭐':'☆')+'</span></div>';
-  });
-  document.getElementById('wordList').innerHTML=html||'<div style="padding:30px;text-align:center;color:var(--sub);font-size:.8em">无匹配结果</div>';
-
-  // Pagination
+  var start=curPage*perPage,pageItems=pool.slice(start,start+perPage),html='';
+  pageItems.forEach(function(item){var fav=isFav(item.w);html+='<div class="witem'+(curWord===item.w?' active':'')+'" onclick="selectWord(\''+item.w+'\')"><span>'+item.w+'</span><span class="wstar'+(fav?' on':'')+'" onclick="event.stopPropagation();toggleFav(\''+item.w+'\')">'+(fav?'★':'☆')+'</span></div>'});
+  document.getElementById('wordList').innerHTML=html||'<div style="padding:30px;text-align:center;color:var(--sub);font-size:.78em">无匹配结果</div>';
   document.getElementById('pageInfo').textContent=(curPage+1)+' / '+pages;
-  document.getElementById('btnPrev').disabled=curPage===0;
-  document.getElementById('btnNext').disabled=curPage>=pages-1;
-
-  // Refresh right if current word still in list
-  if(curWord){
-    var found=pool.find(function(item){return item.w===curWord});
-    if(!found)curWord=null;
-    if(curWord)showWord(curWord);
-  }
+  document.getElementById('btnPrev').disabled=curPage===0;document.getElementById('btnNext').disabled=curPage>=pages-1;
+  if(curWord){var found=pool.find(function(item){return item.w===curWord});if(!found)curWord=null;if(curWord)showWord(curWord)}
 }
 
 function pagePrev(){if(curPage>0){curPage--;applyFilters()}}
 function pageNext(){var pages=Math.ceil(getFiltered().length/perPage)||1;if(curPage<pages-1){curPage++;applyFilters()}}
 
-// ====== WORD DETAIL ======
-function selectWord(w){
-  curWord=w;
-  applyFilters();
-  showWord(w);
-}
+function selectWord(w){curWord=w;applyFilters();showWord(w)}
 
 function showWord(w){
-  var item=DB.find(function(x){return x.w===w});
-  if(!item)return;
-  var fav=isFav(w);
-  var html='<div class="right-header"><h2>'+item.w+'</h2><div class="meta"><span class="badge">'+item.c+'</span><span class="fav" onclick="toggleFav(\''+item.w+'\');showWord(\''+item.w+'\')" title="收藏">'+(fav?'⭐':'☆')+'</span></div></div>';
-
-  // Module 1: 原文场景
-  html+='<div class="module"><div class="module-head"><svg class="m-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>原文场景</div><div class="module-body">'+item.s+'</div></div>';
-
-  // Module 2: 常见搭配
-  html+='<div class="module"><div class="module-head"><svg class="m-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>常见搭配</div><div class="tags-row">';
-  item.co.forEach(function(t){html+='<span class="tag-chip">'+t+'</span>';});
-  html+='</div></div>';
-
-  // Module 3: 词义解释
-  html+='<div class="module"><div class="module-head"><svg class="m-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>词义解释</div><div class="module-body">'+item.d+'</div></div>';
-
-  // Module 4: 使用示例
-  html+='<div class="module"><div class="module-head"><svg class="m-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>使用示例</div><div class="module-body ex-box">'+item.ex+'</div></div>';
-
+  var item=DB.find(function(x){return x.w===w});if(!item)return;var fav=isFav(w);
+  var html='<div class="rhead"><h2>'+item.w+'</h2><div class="rmeta"><span class="rbadge">'+item.c+'</span><span class="rfav" onclick="toggleFav(\''+item.w+'\');showWord(\''+item.w+'\')" title="收藏">'+(fav?'⭐':'☆')+'</span></div></div>';
+  html+='<div class="module"><div class="mhead"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>原文场景</div><div class="mbody">'+item.s+'</div></div>';
+  html+='<div class="module"><div class="mhead"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>常见搭配</div><div class="tags-row">';
+  item.co.forEach(function(t){html+='<span class="tag-chip">'+t+'</span>'});html+='</div></div>';
+  html+='<div class="module"><div class="mhead"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>词义解释</div><div class="mbody">'+item.d+'</div></div>';
+  html+='<div class="module"><div class="mhead"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>使用示例</div><div class="mbody exbox">'+item.ex+'</div></div>';
   document.getElementById('rightContent').innerHTML=html;
 }
 
-// ====== INIT ======
 renderTabs();applyFilters();
 </script></body></html>
