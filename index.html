@@ -2,9 +2,9 @@
 <style>
 :root{--bg:#f5f5f7;--card:#fff;--text:#1d1d1f;--sub:#86868b;--accent:#5865f2;--accent2:#8b5cf6;--border:rgba(0,0,0,.06);--radius:16px;--green:#16a34a}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;line-height:1.5}
+body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;background:#fff;color:var(--text);-webkit-font-smoothing:antialiased;line-height:1.5}
 /* Nav */
-.nav{position:sticky;top:0;z-index:100;background:rgba(245,245,247,.8);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 24px}
+.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 24px}
 .nav-inner{max-width:1300px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:50px}
 .nav-badge{font-size:.68em;padding:5px 12px;border-radius:20px;background:#fff;border:1px solid var(--border);color:var(--sub)}
 /* Hero */
@@ -14,12 +14,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei
 .hero-right{flex-shrink:0}
 .search-wrap{position:relative}
 .search-wrap svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--sub)}
-.search-wrap input{width:320px;padding:11px 16px 11px 40px;border:2px solid var(--border);border-radius:12px;font-size:.82em;outline:none;background:var(--card);transition:.2s;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.search-wrap input{width:320px;padding:11px 16px 11px 40px;border:2px solid var(--border);border-radius:12px;font-size:.82em;outline:none;background:var(--card);transition:.2s;box-shadow:0 4px 18px rgba(0,0,0,.18)}
 .search-wrap input:focus{border-color:var(--accent);box-shadow:0 4px 14px rgba(88,101,242,.1)}
 /* Tabs */
 .tabs-bar{max-width:1300px;margin:0 auto;padding:0 28px 20px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-@media(max-width:768px){.tabs-bar{grid-template-columns:repeat(2,1fr)}}
-.tab{background:var(--card);border-radius:18px;padding:20px 16px;cursor:pointer;transition:all .3s cubic-bezier(.25,.1,.25,1);border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.04);display:flex;align-items:center;gap:14px}
+.tab{background:var(--card);border-radius:18px;padding:20px 16px;cursor:pointer;transition:all .3s cubic-bezier(.25,.1,.25,1);border:1px solid var(--border);box-shadow:0 4px 18px rgba(0,0,0,.18);display:flex;align-items:center;gap:14px}
 .tab:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.08);border-color:rgba(88,101,242,.25)}
 .tab:active{transform:scale(.98)}
 .tab.active{background:#fafaff;border-color:var(--accent);box-shadow:0 4px 16px rgba(88,101,242,.15)}
@@ -30,10 +29,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei
 .tab .cnt{display:none}
 /* Main */
 .main{max-width:1300px;margin:0 auto;padding:0 28px 32px;display:grid;grid-template-columns:300px 1fr;gap:20px;min-height:auto}
-@media(max-width:768px){.main{grid-template-columns:1fr}}
 /* Left */
 .side-left{display:flex;flex-direction:column;gap:0}
-.panel{background:var(--card);border-radius:var(--radius);border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.04);overflow:hidden;display:flex;flex-direction:column;height:calc(52vh);position:sticky;top:160px}
+.panel{background:var(--card);border-radius:var(--radius);border:1px solid var(--border);box-shadow:0 4px 18px rgba(0,0,0,.18);overflow:hidden;display:flex;flex-direction:column;height:calc(52vh);position:sticky;top:160px}
 .panel-head{padding:16px 18px 12px;border-bottom:1px solid var(--border)}
 .panel-head .hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
 .panel-head .hdr span{font-size:.82em;font-weight:700;letter-spacing:-.2px}
@@ -54,7 +52,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei
 .pagination button:hover{border-color:var(--accent);color:var(--accent)}
 .pagination button:disabled{opacity:.3;cursor:not-allowed}
 /* Right */
-.side-right{background:var(--card);border-radius:var(--radius);border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.04);padding:28px 32px;overflow-y:auto;height:52vh;position:sticky;top:160px;-ms-overflow-style:none;scrollbar-width:none}.side-right::-webkit-scrollbar{display:none}
+.side-right{background:var(--card);border-radius:var(--radius);border:1px solid var(--border);box-shadow:0 4px 18px rgba(0,0,0,.18);padding:28px 32px;overflow-y:auto;height:52vh;position:sticky;top:160px;-ms-overflow-style:none;scrollbar-width:none}.side-right::-webkit-scrollbar{display:none}
 .empty-hint{display:flex;align-items:center;justify-content:center;height:300px;flex-direction:column;color:var(--sub);font-size:.82em;gap:12px}
 .rhead{margin-bottom:22px}
 .rhead h2{font-size:1.5em;font-weight:800;letter-spacing:-.5px;margin-bottom:12px}
@@ -73,11 +71,24 @@ body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei
 .do{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.12);z-index:250;display:none}
 .dp{position:fixed;left:-200px;top:0;bottom:0;width:180px;z-index:260;background:var(--bg);border-right:1px solid var(--border);padding:80px 16px 20px;display:flex;flex-direction:column;gap:10px;transition:left .3s ease;box-shadow:4px 0 24px rgba(0,0,0,.06)}
 .dt{position:absolute;right:-44px;top:50%;transform:translateY(-50%);background:var(--card);border-radius:0 12px 12px 0;padding:13px 8px;cursor:pointer;box-shadow:2px 0 16px rgba(0,0,0,.08);border:1px solid var(--border);border-left:0;display:flex;flex-direction:column;gap:4px;z-index:261}
-.dbtn{padding:12px 14px;border-radius:12px;background:var(--card);border:1px solid var(--border);color:var(--text);font-size:.78em;font-weight:700;text-align:center;text-decoration:none;display:block;transition:.15s;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.dbtn{padding:12px 14px;border-radius:12px;background:var(--card);border:1px solid var(--border);color:var(--text);font-size:.78em;font-weight:700;text-align:center;text-decoration:none;display:block;transition:.15s;box-shadow:0 4px 18px rgba(0,0,0,.18)}
 .dbtn:hover{transform:translateY(-1px);border-color:var(--accent);box-shadow:0 4px 12px rgba(88,101,242,.1)}
 .dbtn.on{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border-color:transparent}
 .footer{text-align:center;padding:24px;color:#b0b0b8;font-size:.65em;border-top:1px solid var(--border)}
-</style></head><body>
+@media(max-width:768px){
+  .nav{padding:0 12px}.nav-inner{height:44px;font-size:.82em}.nav-badge{font-size:.6em;padding:4px 8px}
+  .main{padding:16px 12px 24px}
+  .hero{flex-direction:column;text-align:center;padding:20px 16px}
+  .hero h1{font-size:1.1em}.hero p{font-size:.72em}
+  .filters{flex-wrap:wrap;gap:6px;padding:0 8px}
+  .filters input{padding:8px 12px;font-size:.78em;width:100%}
+  .slist{gap:8px;padding:0 8px}
+  .sword{flex-direction:column;align-items:flex-start;gap:6px;padding:14px 16px}
+  .sword-title{font-size:.84em}
+  .pager button{padding:8px 14px;font-size:.74em}
+  .footer{padding:16px;font-size:.6em}
+}
+.home-btn{position:fixed;left:0;top:72px;z-index:90;width:44px;height:44px;background:var(--card,#fff);border:1px solid var(--border,rgba(0,0,0,.06));border-left:0;border-radius:0 14px 14px 0;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .3s cubic-bezier(.25,.1,.25,1);box-shadow:2px 0 12px rgba(0,0,0,.06);color:var(--sub,#86868b)}.home-btn:hover{width:54px;color:var(--accent,#5865f2);box-shadow:4px 0 20px rgba(88,101,242,.15)}.home-btn svg{width:20px;height:20px;transition:transform .3s}.home-btn:hover svg{transform:scale(1.1)}</style></head><body><a href="../公考备考工具箱.html" class="home-btn" title="返回主页"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></a>
 
 <nav class="nav"><div class="nav-inner"><div style="font-size:.88em;font-weight:700;display:flex;align-items:center;gap:6px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>申论规范词</div><div class="nav-badge">规范表达 · 提分利器</div></div></nav>
 
@@ -101,11 +112,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei
 <footer class="footer">申论写作提分工具 · 仅供练习参考</footer>
 
 <div class="do" id="drawerOverlay" onclick="toggleDrawer()"></div>
-<div class="dp" id="drawerPanel"><div class="dt" onclick="toggleDrawer()"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></div><a href="https://thanhtientt51-commits.github.io/jiangsu-jobs-2026/?id="+encodeURIComponent((new URLSearchParams(location.search)).get("id")||"")+"" class="dbtn">筛岗</a><a href="https://thanhtientt51-commits.github.io/mock-interview/?id="+encodeURIComponent((new URLSearchParams(location.search)).get("id")||"")+"" class="dbtn">面试</a><a href="https://thanhtientt51-commits.github.io/xct/?id="+encodeURIComponent((new URLSearchParams(location.search)).get("id")||"")+"" class="dbtn">行测</a><a href="https://thanhtientt51-commits.github.io/sl-practice/?id="+encodeURIComponent((new URLSearchParams(location.search)).get("id")||"")+"" class="dbtn">申论</a></div>
+<div class="dp" id="drawerPanel"><div class="dt" onclick="toggleDrawer()"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></div><a href="https://thanhtientt51-commits.github.io/jiangsu-jobs-2026/" class="dbtn" onclick="appendId(this)">筛岗</a><a href="https://thanhtientt51-commits.github.io/mock-interview/" class="dbtn" onclick="appendId(this)">面试</a><a href="https://thanhtientt51-commits.github.io/xct/" class="dbtn" onclick="appendId(this)">行测</a><a href="https://thanhtientt51-commits.github.io/sl-practice/" class="dbtn" onclick="appendId(this)">申论</a></div>
 
 <script>
 var drawerOpen=false;
 function toggleDrawer(){drawerOpen=!drawerOpen;document.getElementById('drawerPanel').style.left=drawerOpen?'0':'-200px';document.getElementById('drawerOverlay').style.display=drawerOpen?'block':'none'}
+function appendId(el){var p=new URLSearchParams(location.search),id=p.get('id');if(id){el.href+='?id='+encodeURIComponent(id)}}
 
 var DB=[
 {c:"产业发展类",w:"推动产业转型升级",s:"某地传统制造业效益下滑，大量工厂面临淘汰",co:["加快推动产业转型升级","促进产业转型升级步伐"],d:"通过技术创新和结构调整，使产业从低端向高端转变",ex:"该地区通过推动产业转型升级，引导传统制造企业向智能制造方向迈进，实现了经济效益与产业竞争力的双提升。"},
