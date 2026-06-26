@@ -67,13 +67,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei
 .mbody.exbox{background:linear-gradient(135deg,#f0fdf4,#ecfdf5);border:1px solid rgba(22,163,74,.1);color:#333}
 .tags-row{display:flex;gap:8px;flex-wrap:wrap;padding:0}
 .tag-chip{padding:9px 18px;border-radius:18px;font-size:.88em;background:linear-gradient(135deg,rgba(88,101,242,.06),rgba(139,92,246,.04));color:var(--accent);font-weight:600;border:1px solid rgba(88,101,242,.1)}
-/* Drawer */
-.do{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.12);z-index:250;display:none}
-.dp{position:fixed;left:-200px;top:0;bottom:0;width:180px;z-index:260;background:var(--bg);border-right:1px solid var(--border);padding:80px 16px 20px;display:flex;flex-direction:column;gap:10px;transition:left .3s ease;box-shadow:4px 0 24px rgba(0,0,0,.06)}
-.dt{position:absolute;right:-44px;top:50%;transform:translateY(-50%);background:var(--card);border-radius:0 12px 12px 0;padding:13px 8px;cursor:pointer;box-shadow:2px 0 16px rgba(0,0,0,.08);border:1px solid var(--border);border-left:0;display:flex;flex-direction:column;gap:4px;z-index:261}
-.dbtn{padding:12px 14px;border-radius:12px;background:var(--card);border:1px solid var(--border);color:var(--text);font-size:.78em;font-weight:700;text-align:center;text-decoration:none;display:block;transition:.15s;box-shadow:0 4px 18px rgba(0,0,0,.18)}
-.dbtn:hover{transform:translateY(-1px);border-color:var(--accent);box-shadow:0 4px 12px rgba(88,101,242,.1)}
-.dbtn.on{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border-color:transparent}
+
 .footer{text-align:center;padding:24px;color:#b0b0b8;font-size:.65em;border-top:1px solid var(--border)}
 @media(max-width:768px){
   .nav{padding:0 12px}.nav-inner{height:44px;font-size:.82em}.nav-badge{font-size:.6em;padding:4px 8px}
@@ -111,12 +105,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei
 
 <footer class="footer">申论写作提分工具 · 仅供练习参考</footer>
 
-<div class="do" id="drawerOverlay" onclick="toggleDrawer()"></div>
-<div class="dp" id="drawerPanel"><div class="dt" onclick="toggleDrawer()"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></div><a href="https://thanhtientt51-commits.github.io/jiangsu-jobs-2026/" class="dbtn" onclick="appendId(this)">筛岗</a><a href="https://thanhtientt51-commits.github.io/mock-interview/" class="dbtn" onclick="appendId(this)">面试</a><a href="https://thanhtientt51-commits.github.io/xct/" class="dbtn" onclick="appendId(this)">行测</a><a href="https://thanhtientt51-commits.github.io/sl-practice/" class="dbtn" onclick="appendId(this)">申论</a></div>
 
 <script>
-var drawerOpen=false;
-function toggleDrawer(){drawerOpen=!drawerOpen;document.getElementById('drawerPanel').style.left=drawerOpen?'0':'-200px';document.getElementById('drawerOverlay').style.display=drawerOpen?'block':'none'}
 function appendId(el){var p=new URLSearchParams(location.search),id=p.get('id');if(id){el.href+='?id='+encodeURIComponent(id)}}
 
 var DB=[
